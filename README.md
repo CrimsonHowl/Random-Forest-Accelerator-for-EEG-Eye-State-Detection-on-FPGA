@@ -266,12 +266,7 @@ Timing: 8.54ns (target 10ns) ✓
 ---
 
 ### Step 5 — Vivado Block Design
-```tcl
-# In Vivado Tcl Console:
-source vivado/create_vivado_project.tcl
-```
 
-Or manually:
 1. Create new RTL project → part `xc7z020clg400-1`
 2. Add all `.v` files from `solution1/syn/verilog/`
 3. Create block design → add Zynq PS + rf_top + 9 AXI GPIOs
