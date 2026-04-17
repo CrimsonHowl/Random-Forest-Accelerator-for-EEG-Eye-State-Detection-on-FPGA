@@ -225,8 +225,8 @@ Outputs: `forest_split.json`, `test_300.csv`
 The `forest_split.json` is converted to BRAM-based HLS C++ using a custom converter. Each tree becomes a flat node array with a traversal loop — this is what enables the design to fit within the FPGA's resource limits.
 
 ```bash
-# Run the json-to-HLS converter
-python json_to_hls.py \
+Run Json to HLS converter
+python python/jsontoh.py \
   --json forest_split.json \
   --out_dir hls/
 ```
