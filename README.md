@@ -159,28 +159,23 @@ active[j] = ((TREE_FEAT_MASK[j] & noisy_feat_mask) == 0);
 
 ```
 rf-eeg-fpga/
+├── README.md
 │
-├── hls/                          # Vivado HLS source files
-│   ├── rf_eeg.h                  # All typedefs, constants, structs
-│   ├── rf_top.cpp                # Top-level: reset + temporal fusion
-│   ├── trees.cpp                 # 15 BRAM tree functions (auto-generated)
-│   ├── trees.h                   # Tree function declarations
-│   ├── modules.cpp               # Early exit, confidence, tree masking
-│   └── tb/
-│       └── tb_accuracy.cpp       # 300-sample testbench
+├── HLS Files/
+│   ├── rf_eeg.h
+│   ├── rf_top.cpp
+│   ├── modules.cpp
+│   ├── trees.h
+│   └── tb_accuracy.cpp
+│  
+├── Py_Files/
+│   ├── retrain_on_split.py       
+│   ├── jsontoh.py                
+│   └── csv_to_tb.py              
 │
-├── python/                       # Host-side Python pipeline
-│   ├── retrain_on_split.py       # Train RF → export forest_split.json
-│   └── csv_to_tb.py              # Patch test data into testbench
-│
-├── vivado/                       # Vivado project scripts
-│   └── create_vivado_project.tcl # Block design automation TCL
-│
-├── pynq/                         # PYNQ deployment
-│   ├── Final_RF.ipynb            # Main Jupyter notebook (hardware test)
-│   └── test_300.csv              # 300 stratified test samples
-│
-└── README.md
+└── Pynq/
+    ├── Final_RF.ipynb
+    └── test_300.csv
 ```
 
 > **Note:** `trees.cpp` and `forest_split.json` are not included due to file size.
