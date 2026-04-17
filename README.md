@@ -441,15 +441,4 @@ cuts this to 27.8 meters — potentially preventing a collision.
 
 ---
 
-## License
 
-MIT License — see [LICENSE](LICENSE) for details.
-
----
-
-## Citation
-
-**Dataset:**
-Roesler, O. (2013). EEG Eye State.
-UCI Machine Learning Repository.
-https://doi.org/10.24432/C57G7J
